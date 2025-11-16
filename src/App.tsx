@@ -6,7 +6,7 @@ import './styles/Media.css'
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/elecTrade">
 			<MainLayout />
 		</Router>
 	)

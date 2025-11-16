@@ -1,0 +1,318 @@
+/* CreateNFTModal.css */
+
+.create-nft-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Semi-transparent background */
+	overflow-y: auto;
+}
+
+.create-nft-modal .modal-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.create-nft-modal .modal-content {
+	background: white;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	position: relative;
+	z-index: 11;
+	width: 600px;
+	max-width: 90%;
+	max-height: 90vh;
+	overflow-y: auto;
+	margin: auto;
+}
+
+.create-nft-modal .close-modal {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	background: none;
+	font-size: 24px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.create-nft-modal .close-modal:hover:not(:disabled) {
+	color: #ff6b6b;
+}
+
+.create-nft-modal .close-modal:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.create-nft-modal h2 {
+	font-family: 'Oxanium', sans-serif;
+	text-align: center;
+	color: #000000;
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+.create-nft-modal .user-avatar {
+	display: block;
+	margin: 0 auto 20px;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+.create-nft-modal form {
+	display: flex;
+	flex-direction: column;
+}
+
+.create-nft-modal .form-group {
+	margin-bottom: 20px;
+}
+
+.create-nft-modal .form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.create-nft-modal .form-row .form-group {
+	margin-bottom: 0;
+}
+
+.create-nft-modal .flex-1 {
+	flex: 1;
+}
+
+.create-nft-modal .form-group label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	color: #594d5e;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.create-nft-modal .char-count {
+	font-size: 12px;
+	color: #999;
+	font-weight: normal;
+}
+
+.create-nft-modal .form-group input[type='text'],
+.create-nft-modal .form-group input[type='number'],
+.create-nft-modal .form-group input[type='date'],
+.create-nft-modal .form-group input[type='file'],
+.create-nft-modal .form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border-radius: 4px;
+	border: 1px solid #dce1e7;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+	box-sizing: border-box;
+}
+
+.create-nft-modal .form-group input[type='text']:focus,
+.create-nft-modal .form-group input[type='number']:focus,
+.create-nft-modal .form-group input[type='date']:focus,
+.create-nft-modal .form-group input[type='file']:focus,
+.create-nft-modal .form-group textarea:focus {
+	outline: none;
+	border-color: #ffcd4e;
+	box-shadow: 0 0 0 3px rgba(255, 205, 78, 0.1);
+}
+
+.create-nft-modal .form-group textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+.create-nft-modal .form-group input[type='text'][readonly] {
+	background-color: #f3f3f3;
+	color: #bdbdbd;
+	cursor: not-allowed;
+}
+
+.create-nft-modal .form-group input:disabled,
+.create-nft-modal .form-group textarea:disabled {
+	background-color: #f9f9f9;
+	color: #999;
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+/* Image Upload */
+.create-nft-modal .image-upload-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.create-nft-modal .form-group input[type='file'] {
+	padding: 8px;
+	flex: 1;
+	min-width: 200px;
+}
+
+.create-nft-modal .image-preview {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+	overflow: hidden;
+	border: 2px solid #ffcd4e;
+}
+
+.create-nft-modal .image-preview img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.create-nft-modal .image-preview-label {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: rgba(255, 205, 78, 0.9);
+	color: #000;
+	padding: 2px 6px;
+	font-size: 10px;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+/* Error Messages */
+.create-nft-modal .error-message {
+	display: block;
+	color: #ff6b6b;
+	font-size: 12px;
+	margin-top: 5px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.create-nft-modal .form-alert {
+	padding: 12px;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.create-nft-modal .alert-error {
+	background-color: #ffe0e0;
+	color: #d63031;
+	border: 1px solid #ff7675;
+}
+
+.create-nft-modal .form-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.create-nft-modal .submit-btn,
+.create-nft-modal .cancel-btn {
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: 'Oxanium', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	transition: all 0.3s;
+	min-width: 140px;
+}
+
+.create-nft-modal .submit-btn {
+	color: white;
+	background-color: #ffcd4e;
+	box-shadow: 0 2px 8px rgba(255, 205, 78, 0.3);
+}
+
+.create-nft-modal .submit-btn:hover:not(:disabled) {
+	background-color: #e6b84e;
+	box-shadow: 0 4px 12px rgba(255, 205, 78, 0.4);
+	transform: translateY(-2px);
+}
+
+.create-nft-modal .submit-btn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.create-nft-modal .cancel-btn {
+	color: #594d5e;
+	background-color: #f0f0f0;
+}
+
+.create-nft-modal .cancel-btn:hover:not(:disabled) {
+	background-color: #e0e0e0;
+}
+
+.create-nft-modal .cancel-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+	.create-nft-modal .modal-content {
+		padding: 20px;
+		width: 95%;
+	}
+
+	.create-nft-modal h2 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	.create-nft-modal .form-row {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.create-nft-modal .form-group label {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.create-nft-modal .char-count {
+		margin-top: 4px;
+	}
+
+	.create-nft-modal .submit-btn,
+	.create-nft-modal .cancel-btn {
+		padding: 10px 16px;
+		font-size: 14px;
+		min-width: 100px;
+	}
+
+	.create-nft-modal .image-upload-wrapper {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.create-nft-modal .form-group input[type='file'] {
+		min-width: auto;
+	}
+}

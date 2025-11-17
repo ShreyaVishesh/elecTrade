@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/elecTrade/static/css/main.328107ac.css",
+    "main.js": "/elecTrade/static/js/main.2ccc8c91.js",
+    "index.html": "/elecTrade/index.html",
+    "main.328107ac.css.map": "/elecTrade/static/css/main.328107ac.css.map",
+    "main.2ccc8c91.js.map": "/elecTrade/static/js/main.2ccc8c91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.328107ac.css",
+    "static/js/main.2ccc8c91.js"
+  ]
+}
